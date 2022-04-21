@@ -16,3 +16,34 @@ body {
   margin: 0 auto;
   padding: 0 15px;
 }
+
+.menu {
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+  &__item {
+    &:not(:last-child) {
+      margin-right: 45px;
+    }
+  }
+  &__link {
+    @extend %lato-700;
+    font-size: 22px;
+    line-height: 26px;
+    padding: 0 5px 5px;
+    color: var(--main-text-accent);
+    text-transform: uppercase;
+    border-bottom: 2px solid transparent;
+    transition: var(--transition);
+
+    &:hover {
+      border-color: var(--main-text-accent);
+    }
+  }
+}
+
+.active {
+  color: darken(#0063b2, 10%);
+  border-color: darken(#0063b2, 10%);
+}
