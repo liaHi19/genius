@@ -222,3 +222,46 @@
     }
   }
 }
+
+.contact {
+  padding: 120px 0;
+  background-color: #eee;
+  background-image: linear-gradient(rgba(#0063b2, 0.88), rgba(#0063b2, 0.88)),
+    url("../assets/images/bg-contact.jpg");
+  background-position: left center;
+  background-size: 50%;
+  background-repeat: no-repeat;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 380px;
+  }
+  &__info-item {
+    align-self: start;
+    &:not(:last-child) {
+      margin-bottom: 48px;
+    }
+  }
+  &__info-link {
+    display: flex;
+    align-items: center;
+
+    & > span {
+      @extend %lato-700;
+      font-size: 25px;
+      line-height: 30px;
+      letter-spacing: 0.1em;
+
+      margin-left: 38px;
+      max-width: 275px;
+    }
+  }
+}
