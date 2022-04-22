@@ -8,6 +8,7 @@
   width: 100%;
   left: 0;
   top: 0;
+  z-index: 999;
   background-color: var(--bg-color);
   &__inner {
     display: flex;
@@ -46,6 +47,11 @@
     line-height: 27px !important;
     color: #8d8d8d !important;
     cursor: pointer !important;
+
+    @media (max-width: 1150px) {
+      font-size: 18px !important;
+      line-height: 22px !important;
+    }
   }
 
   &__value-container {
@@ -107,4 +113,112 @@
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.portfolio {
+  padding: 35px 0 135px;
+  &__container {
+    max-width: 1306px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  &__start {
+    margin-bottom: 150px;
+
+    @media (max-width: 1150px) {
+      margin-bottom: 80px;
+    }
+  }
+  &__title {
+    @extend %pt-700;
+    font-size: 42px;
+    line-height: 56px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    color: #000;
+    margin-bottom: 35px;
+  }
+  &__content {
+    @extend %mons-400;
+    max-width: 870px;
+    margin: 0 auto;
+  }
+  &__text {
+    text-align: center;
+    letter-spacing: 0.1em;
+    color: #000;
+  }
+
+  &__items {
+    & > li {
+      &:not(:last-child) {
+        margin-bottom: 160px;
+
+        @media (max-width: 1150px) {
+          margin-bottom: 100px;
+        }
+      }
+    }
+  }
+}
+
+.portfolio__item {
+  display: flex;
+  justify-content: space-between;
+  &-left {
+    max-width: 628px;
+    width: 628px;
+    filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.25));
+    text-align: center;
+    z-index: 2;
+  }
+
+  &-img {
+    width: 100%;
+    margin-bottom: 62px;
+  }
+  &-author {
+    @extend %title;
+    color: var(--second-text-color);
+  }
+
+  &-right {
+    align-self: start;
+    padding: 68px 0 76px;
+    background-color: var(--bg-accent);
+    box-shadow: 4px 4px 20px rgba(226, 226, 226, 0.59);
+    margin-top: 100px;
+    z-index: 1;
+
+    @media (max-width: 1150px) {
+      padding: 48px 0 56px;
+      margin-top: 70px;
+    }
+  }
+  &-right.portfolio__item-right--left {
+    padding-left: 128px;
+    padding-right: 54px;
+    text-align: left;
+    margin-left: -72px;
+  }
+  &-right.portfolio__item-right--right {
+    padding-left: 54px;
+    padding-right: 128px;
+    text-align: right;
+    margin-right: -72px;
+  }
+
+  &-title {
+    @extend %pt-700;
+    @extend %title;
+    margin-bottom: 16px;
+  }
+  &-desc {
+    max-width: 540px;
+    & > p {
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+  }
 }

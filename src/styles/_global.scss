@@ -7,7 +7,7 @@ body {
   @extend %mons-500;
   font-size: 18px;
   line-height: 31px;
-  background-color: var(--bg-color);
+  background-color: var(--main-text-color);
   color: var(--main-text-color);
 }
 
@@ -15,6 +15,14 @@ body {
   max-width: 1470px;
   margin: 0 auto;
   padding: 0 15px;
+}
+
+.logo {
+  &__img {
+    @media (max-width: 1150px) {
+      width: 160px;
+    }
+  }
 }
 
 .menu {
@@ -39,6 +47,11 @@ body {
 
     &:hover {
       border-color: var(--main-text-accent);
+    }
+
+    @media (max-width: 1150px) {
+      font-size: 18px;
+      line-height: 22px;
     }
   }
 }

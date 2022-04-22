@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import NavMenu from "./NavMenu";
-import MySelect from "./elements/MySelect";
+import MySelect from "../elements/MySelect";
 
 const Header = () => {
   return (
@@ -11,7 +11,7 @@ const Header = () => {
         <Link className="logo" to="/">
           <img
             className="logo__img"
-            src={require("../assets/images/logo.jpg")}
+            src={require("../../assets/images/logo.jpg")}
             alt="logo"
           />
         </Link>
