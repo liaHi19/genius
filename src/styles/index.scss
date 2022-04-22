@@ -2,3 +2,109 @@
 @import "reset";
 @import "vars";
 @import "global";
+
+.header {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: var(--bg-color);
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1950px;
+    margin: 0 auto;
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+  }
+  &__select {
+    padding: 0 15px 5px;
+  }
+}
+
+.lang-select {
+  max-width: 88px;
+}
+
+.custom-select {
+  &__control {
+    justify-content: center !important;
+    background-color: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+
+  &__single-value {
+    font-family: "Montserrat" serif !important;
+    font-weight: 500 !important;
+    font-size: 22px !important;
+    line-height: 27px !important;
+    color: #8d8d8d !important;
+    cursor: pointer !important;
+  }
+
+  &__value-container {
+    padding: 0 !important;
+    flex: none !important;
+    cursor: pointer !important;
+  }
+
+  &__input {
+    color: transparent !important;
+  }
+
+  &__indicators {
+    cursor: pointer !important;
+  }
+  &__indicator-separator {
+    display: none !important;
+  }
+
+  &__indicator {
+    padding: 0 !important;
+  }
+
+  &__dropdown-indicator {
+    & > svg {
+      fill: #8d8d8d;
+    }
+  }
+
+  &__menu {
+    max-width: 88px !important;
+    justify-content: center !important;
+    background-color: #e5e5e5 !important;
+    color: #504a4a !important;
+  }
+
+  &__option {
+    cursor: pointer !important;
+    &--is-focused {
+      background-color: darken(#e5e5e5, 8%) !important;
+    }
+  }
+
+  &-container {
+    & > div {
+      outline: none !important;
+      box-shadow: none !important;
+    }
+    &:hover,
+    &--menu-is-open {
+      border-color: #ced4da !important;
+    }
+  }
+}
+
+.top {
+  min-height: 100vh;
+  background-image: url(../assets/images/bg.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

@@ -1,10 +1,12 @@
 import React from "react";
-import Navigation from "./components/Navigation";
+import Header from "./components/Header";
+import Top from "./components/Top";
 
 const App = () => {
   return (
     <div>
-      <Navigation />
+      <Header />
+      <Top />
     </div>
   );
 };
