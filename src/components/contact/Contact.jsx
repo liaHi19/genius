@@ -2,6 +2,7 @@ import React from "react";
 
 import ContactForm from "./ContactForm";
 import ContactInfo from "./ContactInfo";
+import NavMenu from "../layout/NavMenu";
 
 const Contact = () => {
   return (
@@ -11,6 +12,9 @@ const Contact = () => {
           <ContactInfo />
           <ContactForm />
         </div>
+      </div>
+      <div className="contact__header">
+        <NavMenu />
       </div>
     </article>
   );

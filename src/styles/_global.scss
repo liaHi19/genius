@@ -19,7 +19,7 @@ body {
 
 .logo {
   &__img {
-    @media (max-width: 1150px) {
+    @media (max-width: 1200px) {
       width: 160px;
     }
   }
@@ -49,7 +49,7 @@ body {
       border-color: var(--main-text-accent);
     }
 
-    @media (max-width: 1150px) {
+    @media (max-width: 1200px) {
       font-size: 18px;
       line-height: 22px;
     }
