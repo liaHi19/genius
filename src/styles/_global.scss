@@ -60,3 +60,38 @@ body {
   color: darken(#0063b2, 10%);
   border-color: darken(#0063b2, 10%);
 }
+
+.input,
+.textarea {
+  border: none;
+  background-color: #fff;
+  outline-width: 0px;
+  &::placeholder {
+    @extend %mons-500;
+    color: var(--placeholder-color);
+    text-transform: capitalize;
+  }
+  &:focus {
+    outline-width: 1px;
+    outline-color: var(--main-text-accent);
+  }
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @extend %lato-700;
+  letter-spacing: 0.1em;
+  padding: 16px 42px;
+  text-transform: uppercase;
+  border: none;
+  filter: drop-shadow(0px 8px 22px rgba(66, 66, 66, 0.25));
+  cursor: pointer;
+}
+
+.btn-disabled {
+  background-color: rgb(148, 148, 148);
+  color: #fff;
+  cursor: auto;
+}
