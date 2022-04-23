@@ -130,7 +130,7 @@
   &__start {
     margin-bottom: 150px;
 
-    @media (max-width: 1150px) {
+    @media (max-width: 1200px) {
       margin-bottom: 80px;
     }
   }
@@ -162,7 +162,7 @@
       &:not(:last-child) {
         margin-bottom: 160px;
 
-        @media (max-width: 1150px) {
+        @media (max-width: 1200px) {
           margin-bottom: 100px;
         }
       }
@@ -204,7 +204,7 @@
     margin-top: 100px;
     z-index: 1;
 
-    @media (max-width: 1150px) {
+    @media (max-width: 1200px) {
       padding: 48px 0 56px;
       margin-top: 70px;
     }
@@ -415,5 +415,21 @@
       padding: 20px 15px;
       top: -40px;
     }
+  }
+}
+
+.footer {
+  padding: 22px 0;
+  background-color: #14202d;
+
+  &__info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @extend %lato-700;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.1em;
+    text-transform: capitalize;
   }
 }
