@@ -1,12 +1,11 @@
 import React from "react";
-import { useForm } from "react-hook-form";
 
 const MyInput = ({ register, error, ...props }) => {
   return (
-    <>
+    <div style={{ height: "69px" }}>
       <input {...register} {...props} />
       {error && <div className="contact__error">{error.message}</div>}
-    </>
+    </div>
   );
 };
 
